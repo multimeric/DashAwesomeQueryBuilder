@@ -1,0 +1,53 @@
+{
+  "name": "react_awesome_query_builder",
+  "version": "0.0.1",
+  "description": "User-friendly React component to build queries.",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack-serve ./webpack.serve.config.js --open",
+    "validate-init": "python _validate_init.py",
+    "prepublish": "npm run validate-init",
+    "build:js-dev": "webpack --mode development",
+    "build:js": "webpack --mode production",
+    "build:py": "dash-generate-components ./src/lib/components react_awesome_query_builder",
+    "build:py-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:py)",
+    "build:all": "npm run build:js && npm run build:js-dev && npm run build:py",
+    "build:all-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:all)"
+  },
+  "author": "Michael Milton ttmigueltt@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.25.0",
+    "react-awesome-query-builder": "^0.2.49"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "autobind-decorator": "^2.4.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^8.0.6",
+    "copyfiles": "^2.0.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.9.1",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "npm": "^6.1.0",
+    "react": ">=0.14",
+    "react-docgen": "^2.20.1",
+    "react-dom": ">=0.14",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-serve": "^1.0.2"
+  },
+  "engines": {
+    "node": ">=8.11.0",
+    "npm": ">=6.1.0"
+  }
+}

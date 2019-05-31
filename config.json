@@ -1,0 +1,222 @@
+{
+    "conjunctions": {
+        "AND": {
+            "label": "And",
+            "mongoConj": "$and",
+            "reversedConj": "OR"
+        },
+        "OR": {
+            "label": "Or",
+            "mongoConj": "$or",
+            "reversedConj": "AND"
+        }
+    },
+    "fields": {
+        "text": {
+            "label": "Text",
+            "type": "text",
+            "operators": [
+                "equal",
+                "not_equal"
+            ]
+        },
+        "num": {
+            "label": "Number",
+            "type": "number",
+            "fieldSettings": {
+                "min": -1,
+                "max": 5
+            },
+            "operators": [
+                "equal",
+                "not_equal",
+                "less",
+                "less_or_equal",
+                "greater",
+                "greater_or_equal",
+                "between",
+                "not_between",
+                "is_empty",
+                "is_not_empty"
+            ]
+        }
+    },
+    "types": {
+        "text": {
+            "widgets": {
+                "text": {
+                    "defaultOperator": "is_empty",
+                    "operators": [
+                        "equal",
+                        "not_equal",
+                        "is_empty",
+                        "is_not_empty",
+                        "proximity"
+                    ],
+                    "widgetProps": {
+                        "valueLabel": "Text",
+                        "valuePlaceholder": "Enter text"
+                    }
+                },
+                "field": {
+                    "operators": [
+                        "equal",
+                        "not_equal",
+                        "proximity"
+                    ]
+                }
+            }
+        },
+        "number": {
+            "mainWidget": "number",
+            "valueSources": [
+                "value",
+                "field"
+            ],
+            "defaultOperator": "equal",
+            "widgets": {
+                "number": {
+                    "operators": [
+                        "equal",
+                        "not_equal",
+                        "less",
+                        "less_or_equal",
+                        "greater",
+                        "greater_or_equal",
+                        "between",
+                        "not_between",
+                        "is_empty",
+                        "is_not_empty"
+                    ],
+                    "widgetProps": {
+                        "valueLabel": "Number2",
+                        "valuePlaceholder": "Enter number2"
+                    }
+                },
+                "slider": {
+                    "operators": [
+                        "equal",
+                        "not_equal",
+                        "less",
+                        "less_or_equal",
+                        "greater",
+                        "greater_or_equal"
+                    ],
+                    "widgetProps": {
+                        "valueLabel": "Slider",
+                        "valuePlaceholder": "Move slider",
+                        "customProps": {
+                            "width": "200px"
+                        }
+                    }
+                },
+                "rangeslider": {
+                    "operators": [
+                        "range_between",
+                        "range_not_between"
+                    ],
+                    "widgetProps": {
+                        "valueLabel": "Range",
+                        "valuePlaceholder": "Select range",
+                        "customProps": {
+                            "width": "300px"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "operators": {
+        "equal": {
+            "label": "==",
+            "labelForFormat": "==",
+            "reversedOp": "not_equal"
+        },
+        "not_equal": {
+            "label": "!=",
+            "labelForFormat": "!=",
+            "reversedOp": "equal"
+        },
+        "less": {
+            "label": "<",
+            "labelForFormat": "<",
+            "reversedOp": "greater_or_equal"
+        },
+        "less_or_equal": {
+            "label": "<=",
+            "labelForFormat": "<=",
+            "reversedOp": "greater"
+        },
+        "greater": {
+            "label": ">",
+            "labelForFormat": ">",
+            "reversedOp": "less_or_equal"
+        },
+        "greater_or_equal": {
+            "label": ">=",
+            "labelForFormat": ">=",
+            "reversedOp": "less"
+        }
+    },
+    "widgets": {
+        "text": {
+            "type": "text",
+            "valueSrc": "value"
+        },
+        "number": {
+            "type": "number",
+            "valueSrc": "value",
+            "valueLabel": "Number",
+            "valuePlaceholder": "Enter number"
+        }
+    },
+    "settings": {
+        "maxLabelsLength": 50,
+        "hideConjForOne": true,
+        "renderSize": "small",
+        "renderConjsAsRadios": false,
+        "renderFieldAndOpAsDropdown": false,
+        "customFieldSelectProps": {
+            "showSearch": true
+        },
+        "groupActionsPosition": "topRight",
+        "setOpOnChangeField": [
+            "keep",
+            "default"
+        ],
+        "clearValueOnChangeField": false,
+        "clearValueOnChangeOp": false,
+        "setDefaultFieldAndOp": false,
+        "maxNesting": 10,
+        "fieldSeparator": ".",
+        "fieldSeparatorDisplay": "->",
+        "showLabels": false,
+        "valueLabel": "Value",
+        "valuePlaceholder": "Value",
+        "fieldLabel": "Field",
+        "operatorLabel": "Operator",
+        "fieldPlaceholder": "Select field",
+        "operatorPlaceholder": "Select operator",
+        "deleteLabel": null,
+        "addGroupLabel": "Add group",
+        "addRuleLabel": "Add rule",
+        "readonlyMode": false,
+        "notLabel": "Not",
+        "showNot": true,
+        "delGroupLabel": null,
+        "canLeaveEmptyGroup": true,
+        "locale": {
+            "short": "en",
+            "full": "en-US"
+        },
+        "valueSourcesInfo": {
+            "value": {
+                "label": "Value"
+            },
+            "field": {
+                "label": "Field",
+                "widget": "field"
+            }
+        }
+    }
+}

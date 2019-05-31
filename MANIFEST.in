@@ -1,0 +1,5 @@
+include react_awesome_query_builder/react_awesome_query_builder.min.js
+include react_awesome_query_builder/react_awesome_query_builder.dev.js
+include react_awesome_query_builder/metadata.json
+include react_awesome_query_builder/package.json
+include README.md
